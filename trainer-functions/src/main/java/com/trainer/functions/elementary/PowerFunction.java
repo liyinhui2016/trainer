@@ -1,5 +1,6 @@
 package com.trainer.functions.elementary;
 
+import com.trainer.check.Predictor;
 import java.math.BigDecimal;
 
 /**
@@ -8,21 +9,23 @@ import java.math.BigDecimal;
 public abstract class PowerFunction implements EFunction {
 
   @Override
-  public BigDecimal func(BigDecimal bigDecimal) {
-    BigDecimal exp = this.exponent();
+  public BigDecimal calc(BigDecimal value) {
+    Integer exp = this.exponent();
     BigDecimal coe = this.coefficient();
-    return null;
+    Predictor.predict(exp != null, "exponent should not be null");
+    Predictor.predict(coe != null, "coefficient should not be null");
+    return value.pow(exp).multiply(coefficient());
   }
 
   /**
    * exponent
    */
-  public abstract BigDecimal exponent();
+  protected abstract Integer exponent();
 
   /**
    * coefficient
    */
-  public abstract BigDecimal coefficient();
+  protected abstract BigDecimal coefficient();
 
 
 }

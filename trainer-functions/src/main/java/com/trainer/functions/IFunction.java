@@ -7,6 +7,6 @@ package com.trainer.functions;
  */
 public interface IFunction<T, R> {
 
-  R func(T t);
+  R calc(T t);
 
 }
