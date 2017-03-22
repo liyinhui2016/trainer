@@ -40,13 +40,9 @@ build.log
 
 #SHITTY output not in target directory
 
-generated/
-
-webAPI/src/test/resources/sql/
-/nbiz-fileserver/target/
-/nbiz-fileserver/src/main/java/com/wanda/idc/nbiz/fileserver/generated/jooq/
-/nbiz-inventory/src/main/java/com/wanda/idc/inventory/entity/
 
 
 #mac file system
 .DS_Store
+
+
